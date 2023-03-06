@@ -56,6 +56,7 @@ Editing and deletion of ANY post will be possible only by admin. User will be ab
 ## Deployment
 
 Deployed using: https://render.com/
+Link to deployed application: https://bloggin-ncif.onrender.com/
 
 1. Deployed the client and server separately, enabling us to update one without affecting the other.
 2. Easier to debug.
