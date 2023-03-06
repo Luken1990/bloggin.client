@@ -68,6 +68,8 @@ TailWindCSS:
 * Tailwind has countless built-in classes that remove the need to start from scratch.
 * Remove any styles that are not needed or are not being used.
 
+Bloggin is a development blog/community where users of all levels are able to create, share, learn and teach from one another. So whether you are a beginner who simply wants to document what you have learned or a veteran who wishes to inspire up-and-comers. It has an easy-to-use platform which requires little to no instructions. 
+
 
 Layout: [Wireframe.pdf](https://github.com/Luken1990/bloggin.client/files/10901937/Wireframe.pdf)
 
