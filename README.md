@@ -95,7 +95,7 @@ Layout: [Wireframe.pdf](https://github.com/Luken1990/bloggin.client/files/109019
 ## Installation
 
 1. DownLoad zipped file to your local machine.
-2. Alternatively clone the repository using the follow url: https://github.com/Luken1990/CarApi.git
+2. Alternatively clone the repository:
 
    - Create a two folders in your local machine to clone the client and server repositories
    - Using using Gitbash / terminal navigate to the folder.
