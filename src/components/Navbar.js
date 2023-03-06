@@ -69,59 +69,63 @@ export const Navbar = () => {
                         <>
                           <Menu.Item>
                             {({ active }) => (
-                              <a
-                                href="/profile"
-                                className={classNames(
-                                  active ? 'bg-gray-100' : '',
-                                  'block px-4 py-2 text-sm text-gray-700'
-                                )}
-                              >
-                                Your Profile
-                              </a>
-                            )}
-                          </Menu.Item>
-                          {user.admin ? (
-                            <Menu.Item>
-                              {({ active }) => (
-                                <a
-                                  href="/admin"
+                              <Link to={'/profile'}>
+                                <span
                                   className={classNames(
                                     active ? 'bg-gray-100' : '',
                                     'block px-4 py-2 text-sm text-gray-700'
                                   )}
                                 >
-                                  Admin
-                                </a>
+                                  Your Profile
+                                </span>
+                              </Link>
+                            )}
+                          </Menu.Item>
+                          {user.admin ? (
+                            <Menu.Item>
+                              {({ active }) => (
+                                <Link to={'/admin'}>
+                                  <span
+                                    className={classNames(
+                                      active ? 'bg-gray-100' : '',
+                                      'block px-4 py-2 text-sm text-gray-700'
+                                    )}
+                                  >
+                                    Admin
+                                  </span>
+                                </Link>
                               )}
                             </Menu.Item>
                           ) : null}
                           <Menu.Item>
                             {({ active }) => (
-                              <a
-                                onClick={handleLogout}
-                                href="/"
-                                className={classNames(
-                                  active ? 'bg-gray-100' : '',
-                                  'block px-4 py-2 text-sm text-gray-700'
-                                )}
-                              >
-                                Sign out
-                              </a>
+                              <Link to={'/'}>
+                                <span
+                                  onClick={handleLogout}
+                                  className={classNames(
+                                    active ? 'bg-gray-100' : '',
+                                    'block px-4 py-2 text-sm text-gray-700'
+                                  )}
+                                >
+                                  Sign out
+                                </span>
+                              </Link>
                             )}
                           </Menu.Item>
                         </>
                       ) : (
                         <Menu.Item>
                           {({ active }) => (
-                            <a
-                              href="/sign"
-                              className={classNames(
-                                active ? 'bg-gray-100' : '',
-                                'block px-4 py-2 text-sm text-gray-700'
-                              )}
-                            >
-                              Login / Register
-                            </a>
+                            <Link to={'/sign'}>
+                              <span
+                                className={classNames(
+                                  active ? 'bg-gray-100' : '',
+                                  'block px-4 py-2 text-sm text-gray-700'
+                                )}
+                              >
+                                Login / Register
+                              </span>
+                            </Link>
                           )}
                         </Menu.Item>
                       )}
