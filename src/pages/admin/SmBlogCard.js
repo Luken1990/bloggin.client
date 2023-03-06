@@ -16,7 +16,7 @@ export const SmBlogCard = (prop) => {
   //set blogs to filtered blogs
   const handleDelete = async (id) => {
     const filteredBlog = blogs.filter((item) => item._id !== id);
-    const response = await fetch(`https://bloggin-ncif.onrender.com/blogs/${id}`, {
+    const response = await fetch(`https://bloggin-api.onrender.com/blogs/${id}`, {
       method: 'DELETE',
       headers: {
         Authorization: 'Bearer ' + token,

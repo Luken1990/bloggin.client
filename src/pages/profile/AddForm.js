@@ -27,7 +27,7 @@ export const AddForm = () => {
       text: text,
       tags: tag,
     };
-    postNewBlog('https://bloggin-ncif.onrender.com/blogs/add', newBlog);
+    postNewBlog('https://bloggin-api.onrender.com/blogs/add', newBlog);
     setImage('');
     setTag([]);
     setHeading('');

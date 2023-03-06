@@ -14,13 +14,16 @@ export const Sign = () => {
     e.preventDefault();
     const data = { email, password };
 
-    const response = await fetch('https://bloggin-ncif.onrender.com/users/login', {
-      method: 'POST',
-      body: JSON.stringify(data),
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    });
+    const response = await fetch(
+      'https://bloggin-api.onrender.com/users/login',
+      {
+        method: 'POST',
+        body: JSON.stringify(data),
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      }
+    );
 
     if (response.status === 200) {
       const currentUser = await response.json();
@@ -37,13 +40,16 @@ export const Sign = () => {
       password,
     };
 
-    const response = await fetch('https://bloggin-ncif.onrender.com/users/register', {
-      method: 'POST',
-      body: JSON.stringify(data),
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    });
+    const response = await fetch(
+      'https://bloggin-api.onrender.com/users/register',
+      {
+        method: 'POST',
+        body: JSON.stringify(data),
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      }
+    );
 
     if (response.status === 201) {
       const currentUser = await response.json();
@@ -150,7 +156,3 @@ export const Sign = () => {
     </div>
   );
 };
-
-//import { userContext } from '../../context/userContext';
-// const [user, setUser] = useContext(userContext);
-// setUser(currentUser);

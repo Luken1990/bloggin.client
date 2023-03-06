@@ -43,7 +43,7 @@ export const UserInput = ({ data, closeModal }) => {
   };
 
   const handleUpdate = async () => {
-    editUserInfo('https://bloggin-ncif.onrender.com/users/update', updateUser);
+    editUserInfo('https://bloggin-api.onrender.com/users/update', updateUser);
     setUser(updateUser);
     closeModal();
   };

@@ -12,7 +12,7 @@ export const LgBlogCard = (prop) => {
 
   // patch request that store user id to indicate the user has liked the blog
   const handleLikes = async () => {
-    const response = await fetch(`https://bloggin-ncif.onrender.com/blogs/${_id}`, {
+    const response = await fetch(`https://bloggin-api.onrender.com/blogs/${_id}`, {
       method: 'PATCH',
       headers: {
         Authorization: 'Bearer ' + token,
@@ -34,7 +34,7 @@ export const LgBlogCard = (prop) => {
 
   //get the author of the current blog
   const getAuthor = async () => {
-    const response = await fetch(`https://bloggin-ncif.onrender.com/users/${user._id}`, {
+    const response = await fetch(`https://bloggin-api.onrender.com/users/${user._id}`, {
       headers: {
         headers: { 'Content-Type': 'application/json' },
       },
@@ -49,7 +49,7 @@ export const LgBlogCard = (prop) => {
 
   //copy the blog article link to clipboard
   const handleLink = (e) => {
-    navigator.clipboard.writeText(`https://bloggin-ncif.onrender.com/article/${_id}`);
+    navigator.clipboard.writeText(`https://bloggin-ncif.onrender.com//article/${_id}`);
   };
 
   //return a article containing user blog information

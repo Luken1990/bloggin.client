@@ -13,7 +13,7 @@ export const MdBlogCard = () => {
 
   //get request to retrieve user blogs
   const getUserBlogs = async () => {
-    const response = await fetch('https://bloggin-ncif.onrender.com/blogs', {
+    const response = await fetch('https://bloggin-api.onrender.com/blogs', {
       headers: {
         Authorization: 'Bearer ' + token,
       },
@@ -34,7 +34,7 @@ export const MdBlogCard = () => {
   //set blogs to filtered blogs
   const handleDelete = async (id) => {
     const filteredBlog = post.filter((item) => item._id !== id);
-    const response = await fetch(`https://bloggin-ncif.onrender.com/blogs/${id}`, {
+    const response = await fetch(`https://bloggin-api.onrender.com/blogs/${id}`, {
       method: 'DELETE',
       headers: {
         Authorization: 'Bearer ' + token,

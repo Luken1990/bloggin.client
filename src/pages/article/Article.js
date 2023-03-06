@@ -9,7 +9,7 @@ export const Article = () => {
   const { id } = useParams();
 
   const getBlog = async () => {
-    const response = await fetch(`https://bloggin-ncif.onrender.com/blogs/${id}`, {
+    const response = await fetch(`https://bloggin-api.onrender.com/blogs/${id}`, {
       headers: {
         'Content-Type': 'application/json',
       },
@@ -19,7 +19,7 @@ export const Article = () => {
     setArticle(blogData);
 
     const authorResponse = await fetch(
-      `https://bloggin-ncif.onrender.com/users/${blogData.user}`,
+      `https://bloggin-api.onrender.com/users/${blogData.user}`,
       {
         headers: {
           headers: { 'Content-Type': 'application/json' },

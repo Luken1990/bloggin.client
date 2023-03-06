@@ -18,7 +18,7 @@ function App() {
 
   //get request to retrieve all blogs
   const getBlogs = async () => {
-    const response = await fetch('https://bloggin-ncif.onrender.com/blogs/all', {
+    const response = await fetch('https://bloggin-api.onrender.com/blogs/all', {
       headers: {
         'Content-Type': 'application/json',
       },
@@ -34,7 +34,7 @@ function App() {
 
   //get the current logged in user
   const getCurrentUser = async () => {
-    const response = await fetch('https://bloggin-ncif.onrender.com/users', {
+    const response = await fetch('https://bloggin-api.onrender.com/users', {
       headers: {
         Authorization: 'Bearer ' + token,
       },

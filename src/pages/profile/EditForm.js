@@ -27,7 +27,7 @@ export const EditForm = ({ data, closeModal }) => {
       text: text,
       tags: tag,
     };
-    editBlog(`https://bloggin-ncif.onrender.com/blogs/${data._id}`, newBlog);
+    editBlog(`https://bloggin-api.onrender.com/blogs/${data._id}`, newBlog);
     closeModal();
   };
 
