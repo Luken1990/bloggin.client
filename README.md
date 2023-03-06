@@ -3,8 +3,23 @@
 
 
 ##### Table of Contents  
+- [General information](#general-information)
 - [Built With](#built-with)
+- [Security](#security)
 - [Installation](#installation)
+- [Deployment](#deployment)
+
+
+## General information
+
+Full MERN Stack application. Bloggin is a community site where web development enthusiasts can share knowledge and information with each other.
+Log in or sign up, create, edit, share, and like blogs. Users will have their own personal profiles where they can add additional information and manage their posts. 
+
+Editing and deletion of ANY post will be possible only by admin. User will be able to delete their own post however they will not be permitted to delete others.
+
+## Security
+* JWT is used to securely transmit information between the client and server during authentication. 
+* API keys are stored as environment variables.
 
 
 ## Built With
@@ -38,6 +53,13 @@
 6. Start your server: npm start
 7. Start your client: npm start
 
+## Deployment
+
+Deployed using: https://render.com/
+
+1. Deployed the client and server separately, enabling us to update one without affecting the other.
+2. Easier to debug.
+3. more secure.
 
 https://user-images.githubusercontent.com/23103970/223166797-9fc53bc0-8c4e-4762-af1a-bad3fc138343.mp4
 
