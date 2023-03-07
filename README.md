@@ -107,8 +107,9 @@ Layout: [Wireframe.pdf](https://github.com/Luken1990/bloggin.client/files/109019
 3. Install NodeJs: https://nodejs.org/en/download/
 4. Open your IDE, navigate to the folder/file.
 5. Install all dependencies enter: npm install
-6. Start your server: npm start
-7. Start your client: npm start
+6. Navigate to the server folder create a .env (environment variable) and input MONGO_URL: you api key and JWT_SECRET: your secret key
+7. Start your server: npm start
+8. Start your client: npm start
 
 ## Deployment
 
