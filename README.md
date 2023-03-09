@@ -28,49 +28,6 @@ Functional Requirements:
 * Only the admin should be able to delete or edit any users' blog posts.
 * Users should not be able to delete other users' blog posts.
 
-Non-functional Requirements:
-
-* Usability: The user interface should be easy to understand and navigate without many instructions. 
-* Reliability: The System must perform without failure in 80 per cent of use cases. In the unlikely case of failure, the system should be operational within 36 hours. 
-* Performance: The system should be able to support multiple users simultaneously.
-* Security: All data within the system should be protected against any unauthorized access. All data passed to the database should have secure endpoints. The user password will be encrypted. 
-* Supportability:  Software must be cross-platform, and able to run on both Mac and Windows. Cross-browsing and mobile responsive. 
-
-User Stories:
-
-1. As a student I want to be able to view blog postings to learn JavaScript fundamentals
-2. As a teacher, I want to be able to share my knowledge with my students by posting blog articles on the fundamentals of web development. 
-3. It is important for you to adopt a student mindset as a junior developer. It's therefore ideal to have a community of like-minded individuals where we can share and learn from one another
-4. As a senior developer, I want to contribute my knowledge and experience to new aspiring young developers.
-
-System architecture:
-
-ExpressJS:
-
-* The reason I chose express is that it is written in javascript, which is simple to learn even if you have never used it before.
-* Express was developed to make building web apps and APIs simple.
-* Fast
-* It is time-efficient.
-* Asynchronous 
-
-
-Create React App:
-
-* You can concentrate on development thanks to the "Quick reloads". Your bundles are automatically optimised throughout the deployment.
-* React apps only need one build dependency.
-* The application automatically reloads, saving you time from having to stop and start it again.
-* Launches in seconds
-
-TailWindCSS:
-
-* It is straightforward to create appealing layouts because of the fast framework and style components.
-* Pre-defined styles can be easily overridden 
-* Tailwind has countless built-in classes that remove the need to start from scratch.
-* Remove any styles that are not needed or are not being used.
-
-Bloggin is a development blog/community where users of all levels are able to create, share, learn and teach from one another. So whether you are a beginner who simply wants to document what you have learned or a veteran who wishes to inspire up-and-comers. It has an easy-to-use platform which requires little to no instructions. 
-
-
 Layout: [Wireframe.pdf](https://github.com/Luken1990/bloggin.client/files/10901937/Wireframe.pdf)
 
 
