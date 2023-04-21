@@ -41,8 +41,8 @@ const Article = () => {
 
   const { _id, image, heading, tags, text, createdAt, likes } = article;
   return (
-    <div className="container mx-auto my-24 max-w-7xl">
-      <div className="px-8 md:grid md:grid-cols-4 md:gap-10">
+    <div className="min-h-[calc(100dvh-216px)] container mx-auto max-w-7xl py-24">
+      <div className="px-8 md:grid md:grid-cols-4 md:gap-10 ">
         <figure className="mb-10 overflow-hidden rounded-2xl md:col-span-2 md:mb-0">
           <img
             className="h-full w-full object-cover"

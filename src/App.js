@@ -1,9 +1,5 @@
 import { Navbar } from './components/Navbar';
 import { Main } from './pages/main/Main';
-// import { Profile } from './pages/profile/Profile';
-// import { Sign } from './pages/signIn/Sign';
-// import { Article } from './pages/article/Article';
-// import { Admin } from './pages/admin/Admin';
 import { Footer } from './components/Footer';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { useContext, useEffect, useState, Suspense, lazy } from 'react';

@@ -31,7 +31,6 @@ const Profile = () => {
                   <UserInfoModal user={user} />
                   <h3 className="mb-1 text-xl">{user.name}</h3>
                   <p className="mb-1 text-sm text-midGrey">{user.email}</p>
-                  {/* <p className="text-xs text-midGrey">{user.country}</p> */}
                 </div>
 
                 <div className="flex justify-center gap-3 text-2xl text-midBlue ">
