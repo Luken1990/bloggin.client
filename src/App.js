@@ -1,14 +1,19 @@
 import { Navbar } from './components/Navbar';
 import { Main } from './pages/main/Main';
-import { Profile } from './pages/profile/Profile';
-import { Sign } from './pages/signIn/Sign';
-import { Article } from './pages/article/Article';
+// import { Profile } from './pages/profile/Profile';
+// import { Sign } from './pages/signIn/Sign';
+// import { Article } from './pages/article/Article';
+// import { Admin } from './pages/admin/Admin';
 import { Footer } from './components/Footer';
-import { Admin } from './pages/admin/Admin';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { useContext, useEffect, useState } from 'react';
+import { useContext, useEffect, useState, Suspense, lazy } from 'react';
 import { blogsContext } from './context/blogsContext';
 import { userContext } from './context/userContext';
+
+const Sign = lazy(() => import('./pages/signIn/Sign'));
+const Profile = lazy(() => import('./pages/profile/Profile'));
+const Admin = lazy(() => import('./pages/admin/Admin'));
+const Article = lazy(() => import('./pages/article/Article'));
 
 function App() {
   const token = JSON.parse(sessionStorage.getItem('token'));
@@ -43,7 +48,7 @@ function App() {
     setUser(currentUser);
   };
 
-  //if token is true get the current user 
+  //if token is true get the current user
   useEffect(() => {
     if (token) {
       getCurrentUser();
@@ -58,10 +63,38 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Main newBlog={newBlog} />} />
-        <Route path="/sign" element={<Sign />} />
-        <Route path="/profile" element={<Profile />} />
-        <Route path="/admin" element={<Admin blogs={blogs} />} />
-        <Route path="/article/:id" element={<Article />} />
+        <Route
+          path="/sign"
+          element={
+            <Suspense>
+              <Sign />
+            </Suspense>
+          }
+        />
+        <Route
+          path="/profile"
+          element={
+            <Suspense>
+              <Profile />
+            </Suspense>
+          }
+        />
+        <Route
+          path="/admin"
+          element={
+            <Suspense>
+              <Admin blogs={blogs} />
+            </Suspense>
+          }
+        />
+        <Route
+          path="/article/:id"
+          element={
+            <Suspense>
+              <Article />
+            </Suspense>
+          }
+        />
       </Routes>
       <Footer />
     </BrowserRouter>

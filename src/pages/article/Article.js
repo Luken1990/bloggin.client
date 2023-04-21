@@ -3,17 +3,20 @@ import { useParams } from 'react-router-dom';
 import { userContext } from '../../context/userContext';
 import { formatISO9075 } from 'date-fns';
 
-export const Article = () => {
+const Article = () => {
   const [article, setArticle] = useState(null);
   const [author, setAuthor] = useState('');
   const { id } = useParams();
 
   const getBlog = async () => {
-    const response = await fetch(`https://bloggin-api.onrender.com/blogs/${id}`, {
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    });
+    const response = await fetch(
+      `https://bloggin-api.onrender.com/blogs/${id}`,
+      {
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      }
+    );
 
     const blogData = await response.json();
     setArticle(blogData);
@@ -39,7 +42,7 @@ export const Article = () => {
   const { _id, image, heading, tags, text, createdAt, likes } = article;
   return (
     <div className="container mx-auto my-24 max-w-7xl">
-      <div className="md:grid md:grid-cols-4 md:gap-10 px-8">
+      <div className="px-8 md:grid md:grid-cols-4 md:gap-10">
         <figure className="mb-10 overflow-hidden rounded-2xl md:col-span-2 md:mb-0">
           <img
             className="h-full w-full object-cover"
@@ -86,4 +89,4 @@ export const Article = () => {
   );
 };
 
-//       <h4 className="mb-10 text-sm italic">{article.subHeading}</h4>
+export default Article;

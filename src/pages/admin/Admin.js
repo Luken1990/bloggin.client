@@ -3,7 +3,7 @@ import { SmBlogCard } from './SmBlogCard';
 //admin page component
 //return a section containing a table
 //with user and blog information
-export const Admin = () => {
+const Admin = () => {
   return (
     <section className="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
       <div className="mt-6 flex flex-col">
@@ -60,3 +60,5 @@ export const Admin = () => {
     </section>
   );
 };
+
+export default Admin;

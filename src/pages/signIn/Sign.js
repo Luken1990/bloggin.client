@@ -3,7 +3,7 @@ import * as BsIcons from 'react-icons/bs';
 import { useState, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-export const Sign = () => {
+const Sign = () => {
   const [signIn, setSignIn] = useState(true);
   const nameRef = useRef('');
   const [email, setEmail] = useState('');
@@ -156,3 +156,5 @@ export const Sign = () => {
     </div>
   );
 };
+
+export default Sign

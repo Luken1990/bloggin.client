@@ -6,7 +6,7 @@ import { MdBlogCard } from '../../components/MdBlogCard';
 import { AddForm } from './AddForm';
 import { UserInfoModal } from './UserInfoModal';
 
-export const Profile = () => {
+const Profile = () => {
   const [user, setUser] = useContext(userContext);
 
   if (!user) return '';
@@ -66,3 +66,5 @@ export const Profile = () => {
     </div>
   );
 };
+
+export default Profile;
