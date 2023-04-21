@@ -18,7 +18,7 @@ export const Pagination = ({ postPerPage, totalPost, paginate }) => {
               <li key={number}>
                 <a
                   onClick={() => paginate(number)}
-                  className="relative block rounded bg-transparent py-1.5 px-3 text-sm text-neutral-600 transition-all duration-300 hover:bg-neutral-100 dark:text-white dark:hover:bg-neutral-700 dark:hover:text-white"
+                  className="relative block rounded bg-transparent py-1.5 px-3 text-sm text-neutral-600 transition-all duration-300 hover:bg-neutral-600 hover:text-white "
                 >
                   {number}
                 </a>
