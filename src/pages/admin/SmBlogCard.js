@@ -34,7 +34,7 @@ export const SmBlogCard = (prop) => {
     <>
       {blogs.map((blog) => {
         return (
-          <tr key={blog._id}>
+          <tr className='bg-white' key={blog._id}>
             <td className="whitespace-nowrap px-4 py-4 text-sm font-medium text-gray-700">
               <div className="inline-flex items-center gap-x-3">
                 <div className="flex items-center gap-x-2">

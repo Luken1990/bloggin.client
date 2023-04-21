@@ -5,10 +5,13 @@ export const Hero = ({ newBlog }) => {
   const { _id, heading, text, image, createdAt } = newBlog;
 
   return (
-    <div className="container mx-auto flex flex-col gap-4 space-y-6 px-6 py-10 lg:h-[32rem] lg:flex-row lg:items-center lg:py-16 xl:gap-0">
-      <div className="w-full lg:w-1/2">
-        <div className="lg:max-w-lg">
-          <h1 className="mb-4 max-w-2xl text-4xl font-extrabold leading-none tracking-tight  md:text-5xl xl:text-6xl">
+    <div
+      style={{ '--image-url': `url(${image})` }}
+      className="h-[50dvh] bg-[image:var(--image-url)] bg-cover bg-center"
+    >
+      <div className="container mx-auto flex h-full max-w-7xl items-center px-6 xl:px-0">
+        <div className="rounded-lg bg-white p-6 lg:max-w-lg">
+          <h1 className="mb-4 max-w-2xl text-4xl font-extrabold leading-none tracking-tight  md:text-5xl xl:text-5xl">
             {heading}
           </h1>
           <small className="text-xs text-midGrey">
@@ -32,14 +35,6 @@ export const Hero = ({ newBlog }) => {
             </Link>
           </div>
         </div>
-      </div>
-
-      <div className="flex h-96 w-full items-center justify-center lg:w-1/2">
-        <img
-          className="h-full w-full max-w-2xl rounded-md object-cover"
-          src={image}
-          alt="glasses photo"
-        />
       </div>
     </div>
   );

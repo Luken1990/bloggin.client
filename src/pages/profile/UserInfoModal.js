@@ -14,7 +14,6 @@ export function UserInfoModal({ user }) {
   }
 
   const updatePost = () => {};
-
   return (
     <>
       <button
